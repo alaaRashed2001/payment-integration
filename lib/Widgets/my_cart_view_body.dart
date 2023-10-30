@@ -4,6 +4,7 @@ import 'package:payment_integration/Helpers/app_size.dart';
 import 'package:payment_integration/Helpers/app_string.dart';
 import 'package:payment_integration/Helpers/color_manager.dart';
 import 'package:payment_integration/Helpers/assets_manager.dart';
+import 'package:payment_integration/Views/payment_details_view.dart';
 import 'package:payment_integration/Widgets/order_info_item.dart';
 import 'package:payment_integration/Widgets/total_price.dart';
 import 'custom_payment_button.dart';
@@ -55,7 +56,11 @@ class MyCartViewBody extends StatelessWidget {
             height: AppSize.s15,
           ),
           CustomPaymentButton(
-            onTap: () {},
+            onTap: () {
+              Navigator.of(context).push(MaterialPageRoute(
+                builder: (context) => const PaymentDetailsView(),
+              ));
+            },
             title: AppStrings.completePayment,
           ),
           const SizedBox(
