@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:payment_integration/Helpers/app_padding.dart';
 import 'package:payment_integration/Helpers/app_string.dart';
 import 'package:payment_integration/Helpers/snackbar.dart';
+import 'package:payment_integration/Views/thank_you_view.dart';
 import 'package:payment_integration/Widgets/payment_methods_list_view.dart';
 
 import 'custom_credit_card.dart';
@@ -49,6 +50,7 @@ class _PaymentDetailsViewBodyState extends State<PaymentDetailsViewBody>
                     // showSnackBar(context,
                     //     message: AppStrings.successfulPayment, error: false);
                   } else {
+                    Navigator.of(context).push(MaterialPageRoute(builder: (context) => const ThankYouView(),));
                     setState(() {
                       autoValidateMode = AutovalidateMode.always;
                     });

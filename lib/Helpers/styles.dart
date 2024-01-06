@@ -31,7 +31,7 @@ abstract class Styles {
     fontWeight: FontWeight.w600,
     height: 0,
   );
-  static TextStyle styleBold20 = TextStyle(
+  static TextStyle style20 = TextStyle(
     color: Colors.black.withOpacity (0.800000011920929),
     fontSize: 20,
     fontFamily: 'Inter',
